@@ -17,7 +17,7 @@ async def open_login_url(context):
     await login_page.navigate()
 
 
-@when(u'i fill "username" on Login page with value "Willy"')
+@when(u'i fill "username" on Login page with value "Mike"')
 @async_run_until_complete
 async def fill_login_page_field(context, field: str, value: str):
     login_page = LoginPage(context.page)
