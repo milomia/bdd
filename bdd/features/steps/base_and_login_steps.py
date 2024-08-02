@@ -5,7 +5,7 @@ from models.base_page import BasePage
 from models.login_page import LoginPage
 
 
-@given('the login page is open')
+@given("the login page is open")
 @async_run_until_complete
 async def open_login_url(context):
     login_page = LoginPage(context.page)

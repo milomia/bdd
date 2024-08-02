@@ -8,7 +8,7 @@ const LoginForm = (props) => {
 
     const [enteredName, setEnteredName] = useState('');
     const [enteredPassword, setEnteredPassword] = useState('');
-    
+
 
     const [isLoginValid, setLoginValid] = useState(false);
     const [isUsernameValid, setUsernameValid] = useState(false);
@@ -54,8 +54,8 @@ const LoginForm = (props) => {
                 }
             },'/account')
         }
-            
-       
+
+
     }
 
 
@@ -69,7 +69,7 @@ const LoginForm = (props) => {
                        type='text'
                        id='name'
                        onChange={nameInputChangeHandler}
-                       
+
                 />
                 {isFormSubmitted && !isUsernameValid && <p className="error-text">Name must not be empty</p>}
             </div>
@@ -79,10 +79,10 @@ const LoginForm = (props) => {
                        type='text'
                        id='password'
                        onChange={passwordInputChangeHandler}
-                      
+
                 />
                 {isFormSubmitted && !isPasswordValid && <p className="error-text">Password must not be empty</p>}
-                
+
             </div>
             <div className="form-actions">
                 <button>Submit</button>

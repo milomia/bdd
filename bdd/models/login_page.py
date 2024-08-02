@@ -8,8 +8,8 @@ class LoginPage(BasePage):
         super().__init__(page)
         self.username = page.locator("[id='name']")
         self.password = page.locator("[id='password']")
-        self.submit = page.get_by_role('button', name='Submit')
-        self.reset_password = page.get_by_role('button', name='Forgot Password')
+        self.submit = page.get_by_role("button", name="Submit")
+        self.reset_password = page.get_by_role("button", name="Forgot Password")
 
     async def navigate(self):
         await self.page.goto("http://localhost:3000/login", timeout=5000)
@@ -41,4 +41,6 @@ class LoginPage(BasePage):
             assert False
 
     async def is_error_message_displayed(self):
-        return await self.page.wait_for_selector(".error-text", state="visible", timeout=5000)
+        return await self.page.wait_for_selector(
+            ".error-text", state="visible", timeout=5000
+        )
